@@ -1,15 +1,12 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
 	//mt.Println(fibonacci(4))
 	//var fact = factorial(20)
-
 	//fmt.Println(fact)
-	isPrime(17)
+	allPrimes(17)
 }
 
 func fibonacci(x int) int {
@@ -31,12 +28,9 @@ func factorial(x int) int {
 	return factorial(x-1) * y
 }
 
-func isPrime(x int) {
-	var primes []int
+func allPrimes(x int) {
 	var isPrime bool
-	var count int = 0
 	for j := x; j > 1; j-- {
-
 		isPrime = true
 		for i := 2; i < j; i++ {
 			if j%i == 0 {
@@ -45,14 +39,7 @@ func isPrime(x int) {
 			}
 		}
 		if isPrime {
-			primes[count] = j
-			count += 1
+			fmt.Print(j, " ")
 		}
-
 	}
-
-	for i := len(primes); i >= 0; i-- {
-		fmt.Print(primes[i])
-	}
-
 }

@@ -28,7 +28,7 @@ func bookIncludeProfitPriceCalculator(normalPagesCount int, picturePagesCount in
 
 	//resimsiz sayfalar için hesaplamayı yapması için hasPicture parametresini false olarak çağırıyoruz
 	totalPrice = pagePriceCalculator(pageType, normalPagesCount, false)
-	//resimli sayfalar için hesaplamayı yapması için hasPicture parametresini false olarak çağırıyoruz
+	//resimli sayfalar için hesaplamayı yapması için hasPicture parametresini true olarak çağırıyoruz
 	totalPrice += pagePriceCalculator(pageType, picturePagesCount, true)
 
 	//kitabın kapağı sert kapak mı yoksa normal kapak mı buna bakıyoruz
